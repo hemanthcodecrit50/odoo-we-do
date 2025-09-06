@@ -1,4 +1,4 @@
-# EcoFinds - Sustainable Second-Hand Marketplace
+# EcoFind - Sustainable Second-Hand Marketplace
 
 ## 📌 Project Overview
 EcoFinds is a platform that empowers sustainable consumption by enabling users to buy and sell second-hand goods.  
@@ -24,8 +24,8 @@ Develop a foundational version of EcoFinds with the following core functionaliti
 ## ⚙️ Tech Stack
 
 ### Frontend
-- React.js (JavaScript)  
-- CSS (no Tailwind)  
+- React.js  
+- CSS  
 - React Router (for navigation)  
 
 ### Backend
@@ -39,13 +39,11 @@ Develop a foundational version of EcoFinds with the following core functionaliti
 - JWT (JSON Web Tokens)  
 
 ### Tools
-- Git & GitHub (Version Control)  
-- Bolt.new (for rapid prototyping)  
-- Figma / Draw.io (for UI wireframes)  
+- Git & GitHub (Version Control)    
 
 ---
 
 ## 📦 Deliverables
 - Functional prototype (responsive desktop + mobile views)  
-- Core flows: Login → Product Feed → Add Product → Cart → Purchases → Dashboard  
+- Core flows: Product Feed → Login → Add Product → Cart → Purchases → Dashboard  
 - Demo-ready with dummy data and placeholder images  
