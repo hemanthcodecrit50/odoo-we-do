@@ -1,10 +1,11 @@
-import Order from '../models/Order.js';
-import Cart from '../models/Cart.js';
-import Product from '../models/Product.js';
-import asyncHandler from '../utils/asyncHandler.js';
-import ApiError from '../utils/ApiError.js';
+const Order = require('../models/Order.js');
+const Cart = require('../models/Cart.js');
+const Product = require('../models/Product');
+const asyncHandler = require('../utils/asyncHandler');
+const ApiError = require('../utils/ApiError');
 
-export const checkoutFromCart = asyncHandler(async (req, res) => {
+
+const checkoutFromCart = asyncHandler(async (req, res) => {
   const cart = await Cart.findOne({ user: req.user.id }).populate('items.product');
   if (!cart || cart.items.length === 0) throw new ApiError(400, 'Cart is empty');
   const items = cart.items.map(i => ({
@@ -28,7 +29,9 @@ export const checkoutFromCart = asyncHandler(async (req, res) => {
   res.status(201).json(order);
 });
 
-export const myOrders = asyncHandler(async (req, res) => {
+const myOrders = asyncHandler(async (req, res) => {
   const orders = await Order.find({ user: req.user.id }).sort({ createdAt: -1 });
   res.json(orders);
 });
+
+module.exports = { checkoutFromCart,myOrders }

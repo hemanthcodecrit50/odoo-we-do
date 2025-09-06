@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { protect } = require('../middleware/auth');
+const { protect } = require('../middlewares/auth');
 const { checkoutFromCart, myOrders } = require('../controllers/order.controller');
 const router = Router();
 

@@ -1,6 +1,6 @@
-const z = require('zod')
+const z = require("zod")
 
-export const productCreateSchema = z.object({
+const productCreateSchema = z.object({
   title: z.string().min(1),
   description: z.string().optional(),
   category: z.string().optional(),
@@ -12,3 +12,5 @@ export const productCreateSchema = z.object({
   originalPackaging: z.boolean().optional(),
   manualIncluded: z.boolean().optional()
 });
+
+module.exports = { productCreateSchema }

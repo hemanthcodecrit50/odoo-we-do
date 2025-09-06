@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { protect } = require('../middleware/auth');
+const { protect } = require('../middlewares/auth');
 const { list, getOne, create, update, remove } = require('../controllers/product.controller');
 const router = Router();
 

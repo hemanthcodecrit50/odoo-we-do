@@ -2,13 +2,13 @@ require('dotenv/config');
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const { connectDB } = require('./config/db');
+const { connectDB } = require('./db/db');
 const authRoutes = require('./routes/auth.routes');
 const productRoutes = require('./routes/product.routes');
 const cartRoutes = require('./routes/cart.routes');
 const orderRoutes = require('./routes/order.routes');
 const userRoutes = require('./routes/user.routes');
-const { notFound, errorHandler } = require('./middleware/error');
+const { notFound, errorHandler } = require('./middlewares/error');
 
 const app = express();
 app.use(cors());

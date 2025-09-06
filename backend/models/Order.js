@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose')
 
-const orderItemSchema = mongoose.Schema(
+const orderItemSchema = new mongoose.Schema(
   {
     product: { 
         type: mongoose.Schema.Types.ObjectId, 
@@ -19,7 +19,7 @@ const orderItemSchema = mongoose.Schema(
   { _id: false }
 );
 
-const orderSchema = mongoose.Schema(
+const orderSchema = new mongoose.Schema(
   {
     user: { 
         type: mongoose.Schema.Types.ObjectId, 
